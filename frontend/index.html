@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Brothers Masory</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; display: flex; background: #f5f7fa; }
+   .sidebar { width: 280px; background: #1e293b; color: white; height: 100vh; position: fixed; overflow-y: auto; }
+   .logo { padding: 25px 20px; text-align: center; border-bottom: 1px solid #334155; }
+   .logo img { max-width: 160px; }
+   .menu { padding: 15px 0; }
+   .menu-item { padding: 14px 25px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: #cbd5e1; text-decoration: none; transition: all 0.2s; }
+   .menu-item:hover { background: #334155; }
+   .menu-item.active { background: #3b82f6; color: #fff; }
+   .menu-item-left { display: flex; align-items: center; gap: 12px; }
+   .menu-item small { font-size: 11px; opacity: 0.6; }
+   .main { margin-left: 280px; flex: 1; padding: 30px; }
+   .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+   .header h1 { font-size: 28px; color: #1e293b; }
+   .header span { color: #64748b; font-size: 14px; }
+   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px; }
+   .card { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+   .card-title { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+   .card-subtitle { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+   .card-value { font-size: 36px; font-weight: 700; color: #d4af37; margin-top: 12px; }
+    table { width: 100%; background: white; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    th, td { padding: 16px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    th { background: #1e293b; color: white; font-size: 12px; font-weight: 600; }
+    th small { display: block; font-weight: 400; font-size: 10px; margin-top: 3px; opacity: 0.7; }
+   .btn { background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin-bottom: 20px; }
+   .btn:hover { background: #2563eb; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://i.imgur.com/8Km9tLL.png" alt="Brothers Masory">
+    </div>
+    <div class="menu">
+      <a class="menu-item active" onclick="mostrarAba('dashboard', this)">
+        <div class="menu-item-left"><span>📊</span> Dashboard</div>
+        <small>Painel</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('projects', this)">
+        <div class="menu-item-left"><span>🏗️</span> Projects</div>
+        <small>Obras</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('employees', this)">
+        <div class="menu-item-left"><span>👷</span> Employees</div>
+        <small>Funcionários</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('services', this)">
+        <div class="menu-item-left"><span>🔨</span> Services</div>
+        <small>Serviços</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('daily', this)">
+        <div class="menu-item-left"><span>📋</span> Daily Report</div>
+        <small>Diário</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('quotes', this)">
+        <div class="menu-item-left"><span>💰</span> Quotes</div>
+        <small>Orçamentos</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('materials', this)">
+        <div class="menu-item-left"><span>📦</span> Materials</div>
+        <small>Materiais</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('tools', this)">
+        <div class="menu-item-left"><span>🔧</span> Tools</div>
+        <small>Ferramentas</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('financial', this)">
+        <div class="menu-item-left"><span>💵</span> Financial</div>
+        <small>Financeiro</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('schedule', this)">
+        <div class="menu-item-left"><span>📅</span> Schedule</div>
+        <small>Agenda</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('marketing', this)">
+        <div class="menu-item-left"><span>📢</span> Marketing</div>
+        <small>Marketing</small>
+      </a>
+      <a class="menu-item" onclick="mostrarAba('admin', this)">
+        <div class="menu-item-left"><span>⚙️</span> Admin</div>
+        <small>Admin</small>
+      </a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="header">
+      <h1 id="page-title">Dashboard</h1>
+      <span id="page-subtitle">Painel Geral</span>
+    </div>
+    <div id="content"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
