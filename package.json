@@ -8,10 +8,23 @@
     "dev": "nodemon backend/server.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "better-sqlite3": "^12.10.0",
+    "cors": "^2.8.6",
+    "express": "^4.22.2",
     "multer": "^1.4.5-lts.1",
     "pdfkit": "^0.18.0",
     "sqlite3": "^5.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grehgcl/masorybrothers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/grehgcl/masorybrothers/issues"
+  },
+  "homepage": "https://github.com/grehgcl/masorybrothers#readme"
 }
